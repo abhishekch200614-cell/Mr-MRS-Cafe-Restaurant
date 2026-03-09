@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Palak Chaudhary | Artisan Coffee & Dining</title>
+
+    
+
+    <!-- Google Fonts for Modern Typography -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+        /* --- CSS VARIABLES & RESET --- */
+
+        :root {
+
+            --primary-color: #3e2723; /* Dark Coffee */
+
+            --secondary-color: #d4a373; /* Latte Gold */
+
+            --bg-light: #fdfbf7; /* Cream */
+
+            --text-dark: #333;
+
+            --text-light: #fff;
+
+            --font-heading: 'Playfair Display', serif;
+
+            --font-body: 'Roboto', sans-serif;
+
+        }
+
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+
+            font-family: var(--font-body);
+
+            color: var(--text-dark);
+
+            background-color: var(--bg-light);
+
+            line-height: 1.6;
+
+        }
+
+
+
+        a { text-decoration: none; color: inherit; }
+
+        ul { list-style: none; }
+
+        img { max-width: 100%; display: block; }
+
+
+
+        /* --- NAVIGATION --- */
+
+        header {
+
+            background-color: var(--primary-color);
+
+            color: var(--text-light);
+
+            padding: 1rem 5%;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        }
+
+
+
+        .logo {
+
+            font-family: var(--font-heading);
+
+            font-size: 1.5rem;
+
+            font-weight: 700;
+
+            color: var(--secondary-color);
+
+        }
+
+
+
+        nav ul {
+
+            display: flex;
+
+            gap: 2rem;
+
+        }
+
+
+
+        nav a {
+
+            font-weight: 500;
+
+            transition: color 0.3s;
+
+            font-size: 0.95rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        nav a:hover {
+
+            color: var(--secondary-color);
+
+        }
+
+
+
+        /* --- HERO SECTION --- */
+
+        #home {
+
+            height: 90vh;
+
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            color: var(--text-light);
+
+            padding: 0 1rem;
+
+        }
+
+
+
+        #home h1 {
+
+            font-family: var(--font-heading);
+
+            font-size: 3.5rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        #home p {
+
+            font-size: 1.2rem;
+
+            margin-bottom: 2rem;
+
+            max-width: 600px;
+
+        }
+
+
+
+        .btn {
+
+            background-color: var(--secondary-color);
+
+            color: var(--primary-color);
+
+            padding: 0.8rem 2rem;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: transform 0.3s, background 0.3s;
+
+        }
+
+
+
+        .btn:hover {
+
+            background-color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        /* --- SECTIONS GENERAL --- */
+
+        section {
+
+            padding: 5rem 10%;
+
+        }
+
+
+
+        .section-title {
+
+            text-align: center;
+
+            font-family: var(--font-heading);
+
+            font-size: 2.5rem;
+
+            margin-bottom: 3rem;
+
+            color: var(--primary-color);
+
+            position: relative;
+
+        }
+
+
+
+        .section-title::after {
+
+            content: '';
+
+            display: block;
+
+            width: 60px;
+
+            height: 3px;
+
+            background-color: var(--secondary-color);
+
+            margin: 10px auto 0;
+
+        }
+
+
+
+        /* --- ABOUT SECTION --- */
+
+        #about {
+
+            background-color: #fff;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            align-items: center;
+
+            gap: 3rem;
+
+        }
+
+
+
+        .about-text {
+
+            flex: 1;
+
+            min-width: 300px;
+
+        }
+
+
+
+        .about-text h3 {
+
+            font-size: 1.8rem;
+
+            margin-bottom: 1rem;
+
+            color: var(--primary-color);
+
+        }
+
+
+
+        .about-image {
+
+            flex: 1;
+
+            min-width: 300px;
+
+        }
+
+
+
+        .about-image img {
+
+            border-radius: 10px;
+
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+        }
+
+
+
+        /* --- MENU / CAFE RESTAURANT --- */
+
+        #menu {
+
+            background-color: var(--bg-light);
+
+        }
+
+
+
+        .menu-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 2rem;
+
+        }
+
+
+
+        .menu-item {
+
+            background: #fff;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+            transition: transform 0.3s;
+
+        }
+
+
+
+        .menu-item:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+        .menu-item img {
+
+            width: 100%;
+
+            height: 200px;
+
+            object-fit: cover;
+
+        }
+
+
+
+        .menu-content {
+
+            padding: 1.5rem;
+
+        }
+
+
+
+        .menu-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .menu-header h4 {
+
+            font-family: var(--font-heading);
+
+            font-size: 1.2rem;
+
+            color: var(--primary-color);
+
+        }
+
+
+
+        .price {
+
+            color: var(--secondary-color);
+
+            font-weight: bold;
+
+        }
+
+
+
+        .menu-desc {
+
+            font-size: 0.9rem;
+
+            color: #666;
+
+        }
+
+
+
+        /* --- CONTACT SECTION --- */
+
+        #contact {
+
+            background-color: var(--primary-color);
+
+            color: var(--text-light);
+
+        }
+
+
+
+        #contact .section-title {
+
+            color: var(--text-light);
+
+        }
+
+
+
+        .contact-container {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 3rem;
+
+            justify-content: center;
+
+        }
+
+
+
+        .contact-info, .contact-form {
+
+            flex: 1;
+
+            min-width: 300px;
+
+        }
+
+
+
+        .contact-info h3 {
+
+            font-family: var(--font-heading);
+
+            margin-bottom: 1.5rem;
+
+            color: var(--secondary-color);
+
+        }
+
+
+
+        .info-item {
+
+            margin-bottom: 1rem;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+
+        form input, form textarea {
+
+            width: 100%;
+
+            padding: 1rem;
+
+            margin-bottom: 1rem;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-family: var(--font-body);
+
+        }
+
+
+
+        form button {
+
+            background-color: var(--secondary-color);
+
+            color: var(--primary-color);
+
+            border: none;
+
+            padding: 1rem 2rem;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            border-radius: 5px;
+
+            transition: background 0.3s;
+
+        }
+
+
+
+        form button:hover {
+
+            background-color: #fff;
+
+        }
+
+
+
+        /* --- FOOTER --- */
+
+        footer {
+
+            background-color: #2c1b18;
+
+            color: #888;
+
+            text-align: center;
+
+            padding: 2rem;
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+
+        @media (max-width: 768px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 1rem;
+
+            }
+
+            
+
+            nav ul {
+
+                gap: 1rem;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+
+            #home h1 {
+
+                font-size: 2.5rem;
+
+            }
+
+
+
+            section {
+
+                padding: 3rem 5%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Header / Navigation -->
+
+    <header>
+
+        <div class="logo">Palak Chaudhary</div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#menu">Menu</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Home / Hero Section -->
+
+    <section id="home">
+
+        <h1>Experience the Art of Coffee</h1>
+
+        <p>Welcome to Palak Chaudhary Cafe. Where every cup tells a story and every bite is a delight.</p>
+
+        <a href="#menu" class="btn">View Our Menu</a>
+
+    </section>
+
+
+
+    <!-- About Section -->
+
+    <section id="about">
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cafe Interior">
+
+        </div>
+
+        <div class="about-text">
+
+            <h2 class="section-title" style="text-align: left; margin: 0 0 1rem 0;">Our Story</h2>
+
+            <h3>More Than Just a Cafe</h3>
+
+            <p>Founded with a passion for quality and community, Palak Chaudhary has been serving the finest artisanal coffee since 2023. We source our beans ethically from sustainable farms around the world.</p>
+
+            <br>
+
+            <p>Whether you are looking for a quiet corner to work, a place to catch up with friends, or simply the perfect morning brew, our doors are always open.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Menu / Restaurant Section -->
+
+    <section id="menu">
+
+        <h2 class="section-title">Our Favorites</h2>
+
+        <div class="menu-grid">
+
+            <!-- Item 1 -->
+
+            <div class="menu-item">
+
+                <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Latte">
+
+                <div class="menu-content">
+
+                    <div class="menu-header">
+
+                        <h4>Signature Latte</h4>
+
+                        <span class="price">$4.50</span>
+
+                    </div>
+
+                    <p class="menu-desc">Espresso with steamed milk and a hint of vanilla bean.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 2 -->
+
+            <div class="menu-item">
+
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cocktail">
+
+                <div class="menu-content">
+
+                    <div class="menu-header">
+
+                        <h4>Avocado Toast</h4>
+
+                        <span class="price">$8.00</span>
+
+                    </div>
+
+                    <p class="menu-desc">Sourdough bread topped with smashed avocado and poached egg.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 3 -->
+
+            <div class="menu-item">
+
+                <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pastry">
+
+                <div class="menu-content">
+
+                    <div class="menu-header">
+
+                        <h4>Almond Croissant</h4>
+
+                        <span class="price">$3.75</span>
+
+                    </div>
+
+                    <p class="menu-desc">Flaky pastry filled with rich almond cream and topped with nuts.</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 4 -->
+
+            <div class="menu-item">
+
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Iced Coffee">
+
+                <div class="menu-content">
+
+                    <div class="menu-header">
+
+                        <h4>Cold Brew</h4>
+
+                        <span class="price">$4.00</span>
+
+                    </div>
+
+                    <p class="menu-desc">Steeped for 24 hours for a smooth, bold flavor.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Visit Us</h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3>Get in Touch</h3>
+
+                <p style="margin-bottom: 2rem;">We'd love to hear from you. Come visit us or send us a message.</p>
+
+                
+
+                <div class="info-item">
+
+                    <strong>📍 Address:</strong> Uttar Pradesh, Ghaziabad, Near by Aditya world city Gate , Mehrauli 
+
+                </div>
+
+                <div class="info-item">
+
+                    <strong>📞 Phone:</strong> +91 8506812098
+
+                </div>
+
+                <div class="info-item">
+
+                    <strong>✉️ Email:</strong> abhishekch2121@gmail.com
+
+                </div>
+
+                <div class="info-item">
+
+                    <strong>⏰ Hours:</strong> Mon-Sun: 7am - 8pm
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-form">
+
+                <form>
+
+                    <input type="text" placeholder="Your Name" required>
+
+                    <input type="email" placeholder="Your Email" required>
+
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>&copy; 2023 Gunguncafeno1. All rights reserved.</p>
+
+    </footer>
+
+
+
+</body>
+
+</html><h2>Contact Us</h2>
+
+<p>Phone: <a href="tel:+918506812098">+91 8506812098</a></p>
+
+<p>Email: <a href="mailto:abhishekch2121@gmail.com">abhishekch2121@gmail.com</a></p>
